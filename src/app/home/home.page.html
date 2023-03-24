@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<!-- Game Title -->
+  <h1>Nim Game</h1>
+
+  <br>
+<!-- display row 1  -->
+  <div align="center">
+    <ion-button *ngFor="let x of row1" (click)="rowOne()">1</ion-button>
+  </div>
+
+<!-- display row 2  -->
+  <div align="center">
+    <ion-button *ngFor="let x of row2" (click)="rowTwo()">1</ion-button>
+  </div>
+
+<!-- display row 3  -->
+  <div align="center">
+    <ion-button *ngFor="let x of row3" (click)="rowThree()">1</ion-button>
+  </div>
+
+<!-- display row 4  -->
+  <div align="center">
+    <ion-button *ngFor="let x of row4" (click)="rowFour()">1</ion-button>
+  </div>
+
+  <br>
+
+  <div align="center">
+    <ion-button fill="outline" color='danger' (click)="pass()" >pass</ion-button>
+  </div>
+
+<div *ngIf="end" align="center">
+      <h3>You Win :)</h3>
+      <ion-button (click)="reload()">play again ?</ion-button>
+</div>
+
+
+
+  
+</ion-content>
